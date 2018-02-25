@@ -1,0 +1,13 @@
+[Unit]
+Description=MQTT client that runs executes a command on the computer 
+After=network.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/mqttexec
+ExecStart=/home/pi/mqttexec.sh
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
